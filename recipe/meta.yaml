@@ -14,30 +14,31 @@ source:
         - no_compile_setup.patch  # [osx]
 
 build:
-    number: 0
+    number: 1
+    skip: True  # [osx]
 
 requirements:
     build:
         - python
         - setuptools
-        - numpy x.x
+        - numpy
         - scipy
         - biggus
         - cartopy
         - netcdf4
         - cf_units
         - pyke
-        - libmo_unpack  # [not win]
+        - mo_pack  # [not win]
     run:
         - python
-        - numpy x.x
+        - numpy
         - scipy
         - biggus
         - cartopy
         - netcdf4
         - cf_units
         - pyke
-        - libmo_unpack  # [not win]
+        - mo_pack  # [not win]
         - matplotlib
         - python-ecmwf_grib >=1.12.1  # [not win and not py3k]
 
