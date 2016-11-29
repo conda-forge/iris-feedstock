@@ -1,4 +1,4 @@
-{% set version = "1.10.0" %}
+{% set version = "1.11.0" %}
 
 package:
     name: iris
@@ -7,7 +7,7 @@ package:
 source:
     fn: iris-v{{ version }}.tar.gz
     url: https://github.com/SciTools/iris/archive/v{{ version }}.tar.gz
-    sha256: e020b883d94b66e7931a05d211c1d539abb2674dcdeaa4a7da3d32ae4ad5c269
+    sha256: 95cd7381a994ec79a99b59ababe7c179c0416034cb450be62b83b1908a807316
     patches:
         # Issue reported in https://github.com/SciTools/iris/issues/2004.
         # We work around this in build.sh.
@@ -59,3 +59,4 @@ extra:
         - pelson
         - rhattersley
         - ocefpaf
+        - bjlittle
