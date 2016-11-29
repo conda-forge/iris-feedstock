@@ -51,7 +51,9 @@ test:
 
 about:
     home: http://www.scitools.org.uk/iris
-    license: GNU Lesser General Public License
+    license: GPL 3
+    license_family: GPL
+    license_file: README.md
     summary: Analyse and visualise meteorological and oceanographic data sets.
 
 extra:
