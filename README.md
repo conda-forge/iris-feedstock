@@ -3,7 +3,7 @@ About iris
 
 Home: http://www.scitools.org.uk/iris
 
-Package license: GNU Lesser General Public License
+Package license: GPL3
 
 Feedstock license: BSD 3-Clause
 
