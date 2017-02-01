@@ -4,15 +4,12 @@
 language: generic
 
 os: osx
-osx_image: beta-xcode6.1
+osx_image: xcode6.4
 
 env:
   matrix:
     
     - CONDA_PY=27
-    - CONDA_PY=34
-    - CONDA_PY=35
-    - CONDA_PY=36
   global:
     # The BINSTAR_TOKEN secure variable. This is defined canonically in conda-forge.yml.
     - secure: "ywt0zV0GdWAHcxjQUpf4D45n7a38QHz99tHjO6UUhWeeh0uPAjKyWvN67m5rbhyVOAzTpMqja5YefudKa0fX6M8wERQ5t4gmEKFtwVnV+5Aof0VBsONhVDmEBrTkCNXdefCpzsitlp9n1yyb8aG8KbbmBhydi4IuxxbNxTNVdh+wfcj6a5Ov13QSQs6WJ5CJzNqQWzwCsoaTW6GjZECH21y4Ux5DlUdiiJ+IbdcKc8SeEQIuE2K7PEI/SVSAoKHNOXdHdp77xy/u97EUFkxeXBXObz4BFt6fHgvXOYcKd9xajqeCvyaPsdEOUfz9m8nlEQAo8TOo25Nt76KxQqR0cDRntegrsGfVdS5UdlzlL3VrVoUHVSOcfRgznx/MK2gkysdolb/Q7KdVsNXPhiBy4KpX5FSYe/dpBGxHQqAX4qHr6/hVIEBZE1MWfkYvKCAewoV0PLE4/ypG8j+B6/2VCo+KDJLobsynYVraArrJlycGHv0fejYknWVCctgwNw4cER/HsOIPPEadMwoz3gN/6uV8soI3vnPAuR98LdHvoTKXpMSIzO13rpSAmGftDYPOkFe9VI5kRQYZX2p3+4f9vKuotyLVV/vLGYebPJTic0eoTcHlQmjWZB1JWzUTArrapSxMyuPrrgnjmipf9w33IW7amk+2g42g5d5JkBY5XWI="
@@ -20,7 +17,7 @@ env:
 
 before_install:
     # Remove homebrew.
-    - brew remove --force $(brew list)
+    - brew remove --force --ignore-dependencies $(brew list)
     - brew cleanup -s
     - rm -rf $(brew --cache)
 
