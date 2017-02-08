@@ -14,7 +14,7 @@ source:
     - no_compile_setup.patch  # [osx]
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
@@ -42,7 +42,7 @@ requirements:
     - cf_units
     - pyke
     - mo_pack  # [not win]
-    - matplotlib
+    - matplotlib <2
     - nc_time_axis
     - iris-grib  # [not (win or py3k)]
 
