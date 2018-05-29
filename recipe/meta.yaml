@@ -9,7 +9,7 @@ source:
   sha256: 8605ab92c67d622e83fff6d7169fe154d9f8610edd8463b697b574884c158ba2
 
 build:
-  number: 2
+  number: 3
 
 requirements:
   build:
@@ -28,12 +28,10 @@ requirements:
     - cf_units
     - dask >=0.17.1
     - matplotlib
-    - netcdf4 <1.4
     - numpy
     - pyke
     - scipy
     - six
-    - iris-grib  # [not (win or py3k)]
 
 test:
   imports:
