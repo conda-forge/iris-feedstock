@@ -9,7 +9,7 @@ source:
   sha256: 3ba0b78b93cb69d8c865b9cdcde57be2da9b174096a1c075e6fc9188c8f8afd1
 
 build:
-  number: 1
+  number: 2
 
 requirements:
   build:
@@ -17,7 +17,7 @@ requirements:
     - pip
     - cartopy >=0.14
     - cf_units >=2
-    - cftime
+    - cftime !=1.0.2.1
     - dask
     - numpy >=1.14
     - pyke
@@ -27,7 +27,7 @@ requirements:
     - python
     - cartopy >=0.14
     - cf_units >=2
-    - cftime
+    - cftime !=1.0.2.1
     - dask
     - matplotlib >=2
     - netcdf4 >=1.4
