@@ -3,7 +3,7 @@ About iris
 
 Home: http://www.scitools.org.uk/iris
 
-Package license: GPL3
+Package license: GPL-3.0
 
 Feedstock license: BSD 3-Clause
 
@@ -201,7 +201,6 @@ Feedstock Maintainers
 
 * [@bjlittle](https://github.com/bjlittle/)
 * [@corinnebosley](https://github.com/corinnebosley/)
-* [@dkillick](https://github.com/dkillick/)
 * [@ocefpaf](https://github.com/ocefpaf/)
 * [@pelson](https://github.com/pelson/)
 * [@rhattersley](https://github.com/rhattersley/)
