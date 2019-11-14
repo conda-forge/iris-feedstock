@@ -12,16 +12,10 @@ build:
   number: 0
 
 requirements:
-  build:
+  host:
     - python
     - pip
-    - cartopy >=0.14
-    - cf-units >=2
-    - cftime !=1.0.2.1
-    - dask
-    - numpy >=1.14
     - pyke
-    - scipy
     - six
   run:
     - python
@@ -29,9 +23,9 @@ requirements:
     - cf-units >=2
     - cftime !=1.0.2.1
     - dask
-    - matplotlib >=2,<3
+    - matplotlib-base >=2,<3
     - netcdf4 >=1.4
-    - numpy >=1.14, !=1.15.2
+    - numpy >=1.14,!=1.15.2
     - pyke
     - scipy
     - six
