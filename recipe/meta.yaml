@@ -1,4 +1,4 @@
-{% set version = "2.4.0rc0" %}
+{% set version = "2.4.0" %}
 
 package:
   name: iris
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/SciTools/iris/archive/v{{ version }}.tar.gz
-  sha256: 6925dd4b3c4f69b1ec7cdb9116d8bfa092bb18609910642e6dfca998fa756edc
+  sha256: 7708d05bd83da5dd8fc5df8bae02767b8b5a1e814732c8eaaf11c8298508f0fc
 
 build:
   number: 0
