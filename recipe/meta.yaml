@@ -31,6 +31,10 @@ requirements:
     - six
 
 test:
+  requires:
+    - pip
+  commands:
+    - pip check
   imports:
     - iris
     - iris.fileformats._pyke_rules.compiled_krb
