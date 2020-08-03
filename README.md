@@ -1,7 +1,7 @@
 About iris
 ==========
 
-Home: http://www.scitools.org.uk/iris
+Home: https://readthedocs.org/projects/scitools-iris/
 
 Package license: GPL-3.0
 
