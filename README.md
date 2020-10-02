@@ -3,7 +3,7 @@ About iris
 
 Home: http://www.scitools.org.uk/iris
 
-Package license: LGPL-3.0-only
+Package license: LGPL-3.0-or-later
 
 Feedstock license: BSD-3-Clause
 
