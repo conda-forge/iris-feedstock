@@ -1,4 +1,4 @@
-{% set version = "2.4.0" %}
+{% set version = "3.0.0rc0" %}
 
 package:
   name: iris
@@ -6,29 +6,29 @@ package:
 
 source:
   url: https://github.com/SciTools/iris/archive/v{{ version }}.tar.gz
-  sha256: 7708d05bd83da5dd8fc5df8bae02767b8b5a1e814732c8eaaf11c8298508f0fc
+  sha256: 5a9a08870af18a1f128eef3b15afadcf68579346668ae929805e057b5f60d64c
 
 build:
   number: 0
+  skip: true  # [py<36]
 
 requirements:
   host:
     - python
     - pip
     - pyke
-    - six
   run:
     - python
-    - cartopy >=0.14
+    - cartopy >=0.18
     - cf-units >=2
     - cftime !=1.0.2.1
-    - dask
+    - dask >=2
     - matplotlib-base
     - netcdf4 >=1.4
     - numpy >=1.14,!=1.15.2
     - pyke
     - scipy
-    - six
+    - python-xxhash
 
 test:
   imports:
@@ -37,7 +37,7 @@ test:
 
 about:
   home: http://www.scitools.org.uk/iris
-  license: LGPL-3.0
+  license: LGPL-3.0-or-later
   license_family: GPL
   license_file: COPYING.LESSER
   summary: 'Analyse and visualise meteorological and oceanographic data sets.'
