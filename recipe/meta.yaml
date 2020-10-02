@@ -10,14 +10,15 @@ source:
 
 build:
   number: 0
+  skip: true  # [py<36]
 
 requirements:
   host:
-    - python >=3.6
+    - python
     - pip
     - pyke
   run:
-    - python >=3.6
+    - python
     - cartopy >=0.18
     - cf-units >=2
     - cftime !=1.0.2.1
