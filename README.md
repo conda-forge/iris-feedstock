@@ -1,7 +1,7 @@
 About iris
 ==========
 
-Home: http://www.scitools.org.uk/iris
+Home: https://scitools-iris.readthedocs.io/en/stable/
 
 Package license: LGPL-3.0-or-later
 
