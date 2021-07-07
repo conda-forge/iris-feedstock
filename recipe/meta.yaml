@@ -1,4 +1,4 @@
-{% set version = "3.0.2" %}
+{% set version = "3.0.3" %}
 
 package:
   name: iris
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://github.com/SciTools/iris/archive/v{{ version }}.tar.gz
-  sha256: 9653575aaeb2e94920ab95242654e188ad8065b435d89a8e254bc010bc468cd7
+  sha256: a514631f42b3301e3764149cc03001391eac3e81a749aa5641d598682a3489f0
 
 build:
-  number: 2
+  number: 0
   skip: true  # [py<36]
 
 requirements:
