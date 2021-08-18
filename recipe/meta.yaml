@@ -1,4 +1,4 @@
-{% set version = "3.0.0rc0" %}
+{% set version = "3.1.0rc0" %}
 
 package:
   name: iris
@@ -6,37 +6,34 @@ package:
 
 source:
   url: https://github.com/SciTools/iris/archive/v{{ version }}.tar.gz
-  sha256: 5a9a08870af18a1f128eef3b15afadcf68579346668ae929805e057b5f60d64c
+  sha256: d4cf6b827aa15fa6f93078143cd865111e12600b7c68ebfe84e4022c7f3dbfe8
 
 build:
   number: 0
-  skip: true  # [py<36]
+  skip: true  # [py<37]
 
 requirements:
   host:
     - python
     - pip
-    - pyke
   run:
     - python
     - cartopy >=0.18
-    - cf-units >=2
-    - cftime !=1.0.2.1
+    - cf-units
+    - cftime >=1.5.0
     - dask >=2
     - matplotlib-base
     - netcdf4 >=1.4
     - numpy >=1.14,!=1.15.2
-    - pyke
     - scipy
     - python-xxhash
 
 test:
   imports:
     - iris
-    - iris.fileformats._pyke_rules.compiled_krb
 
 about:
-  home: http://www.scitools.org.uk/iris
+  home: https://scitools-iris.readthedocs.io/en/stable/
   license: LGPL-3.0-or-later
   license_family: GPL
   license_file: COPYING.LESSER
