@@ -1,4 +1,4 @@
-{% set version = "3.0.4" %}
+{% set version = "3.1.0" %}
 
 package:
   name: iris
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/SciTools/iris/archive/v{{ version }}.tar.gz
-  sha256: 7929255a50b484eed270f74ea13dac5bc894ec89f3f580c01ecc2dfa2cfd6144
+  sha256: f5dc2fe0c6c645950223c156cec378977c5700d361812dcc526c09d01315f455
 
 build:
   number: 0
@@ -21,7 +21,7 @@ requirements:
     - python
     - cartopy >=0.18
     - cf-units
-    - cftime >=1.5.0 
+    - cftime >=1.5.0
     - dask >=2
     - matplotlib-base
     - netcdf4 >=1.4
