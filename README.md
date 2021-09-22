@@ -103,6 +103,7 @@ Current release info
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-iris-green.svg)](https://anaconda.org/conda-forge/iris) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/iris.svg)](https://anaconda.org/conda-forge/iris) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/iris.svg)](https://anaconda.org/conda-forge/iris) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/iris.svg)](https://anaconda.org/conda-forge/iris) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-scitools--iris-green.svg)](https://anaconda.org/conda-forge/scitools-iris) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/scitools-iris.svg)](https://anaconda.org/conda-forge/scitools-iris) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/scitools-iris.svg)](https://anaconda.org/conda-forge/scitools-iris) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/scitools-iris.svg)](https://anaconda.org/conda-forge/scitools-iris) |
 
 Installing iris
 ===============
@@ -114,10 +115,10 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `iris` can be installed with:
+Once the `conda-forge` channel has been enabled, `iris, scitools-iris` can be installed with:
 
 ```
-conda install iris
+conda install iris scitools-iris
 ```
 
 It is possible to list all of the versions of `iris` available on your platform with:
