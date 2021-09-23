@@ -9,29 +9,42 @@ source:
   sha256: 7c825ccc3bd823c6c66f8dc2bc98e56f84e41a0bd4cd2e9ac1b51930ad59c6a3
 
 build:
-  number: 0
+  number: 1
   skip: true  # [py<37]
 
-requirements:
-  host:
-    - python
-    - pip
-  run:
-    - python
-    - cartopy >=0.18
-    - cf-units
-    - cftime >=1.5.0 
-    - dask >=2
-    - matplotlib-base
-    - netcdf4 >=1.4
-    - numpy >=1.14,!=1.15.2
-    - scipy
-    - python-xxhash
+outputs:
+  - name: iris
+    script: build_base.sh  # [not win]
+    script: build_base.bat  # [win]
+    requirements:
+      host:
+        - python
+        - pip
+      run:
+        - python
+        - cartopy >=0.18
+        - cf-units
+        - cftime >=1.5.0 
+        - dask >=2
+        - matplotlib-base
+        - netcdf4 >=1.4
+        - numpy >=1.14,!=1.15.2
+        - scipy
+        - python-xxhash
 
-test:
-  imports:
-    - iris
+    test:
+      imports:
+        - iris
 
+  - name: scitools-iris
+    build:
+      noarch: generic
+    requirements:
+      run:
+        - {{ pin_subpackage('iris', max_pin="x.x.x") }}
+    test:
+      imports:
+        - iris
 about:
   home: https://scitools-iris.readthedocs.io/en/stable/
   license: LGPL-3.0-or-later
