@@ -9,8 +9,8 @@ source:
   sha256: 7c825ccc3bd823c6c66f8dc2bc98e56f84e41a0bd4cd2e9ac1b51930ad59c6a3
 
 build:
-  number: 1
-  skip: true  # [py<37]
+  noarch: python
+  number: 2
 
 outputs:
   - name: iris
