@@ -7,6 +7,9 @@ package:
 source:
   url: https://github.com/SciTools/iris/archive/v{{ version }}.tar.gz
   sha256: 7c825ccc3bd823c6c66f8dc2bc98e56f84e41a0bd4cd2e9ac1b51930ad59c6a3
+  patches:
+    # can be dropped next release
+    - backport-4418.patch
 
 build:
   noarch: python
@@ -14,14 +17,13 @@ build:
 
 outputs:
   - name: iris
-    script: build_base.sh  # [not win]
-    script: build_base.bat  # [win]
+    script: build_base.sh
     requirements:
       host:
-        - python
+        - python >=3.6
         - pip
       run:
-        - python
+        - python >=3.6
         - cartopy >=0.18
         - cf-units
         - cftime >=1.5.0 
