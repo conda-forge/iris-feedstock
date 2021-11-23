@@ -9,7 +9,7 @@ source:
   sha256: 7c825ccc3bd823c6c66f8dc2bc98e56f84e41a0bd4cd2e9ac1b51930ad59c6a3
 
 build:
-  number: 1
+  number: 2
   skip: true  # [py<37]
 
 outputs:
@@ -25,7 +25,7 @@ outputs:
         - cartopy >=0.18
         - cf-units
         - cftime >=1.5.0 
-        - dask >=2
+        - dask-core >=2
         - matplotlib-base
         - netcdf4 >=1.4
         - numpy >=1.14,!=1.15.2
