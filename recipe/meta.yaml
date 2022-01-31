@@ -1,4 +1,4 @@
-{% set version = "3.1.0rc0" %}
+{% set version = "3.2.0rc0" %}
 
 package:
   name: iris
@@ -6,38 +6,50 @@ package:
 
 source:
   url: https://github.com/SciTools/iris/archive/v{{ version }}.tar.gz
-  sha256: d4cf6b827aa15fa6f93078143cd865111e12600b7c68ebfe84e4022c7f3dbfe8
+  sha256: 03589b29d8e20510614ba5d8cf57ce1fca4cf2b128033180beee7e6bf9def202
 
 build:
+  noarch: python
   number: 0
-  skip: true  # [py<37]
 
-requirements:
-  host:
-    - python
-    - pip
-  run:
-    - python
-    - cartopy >=0.18
-    - cf-units
-    - cftime >=1.5.0
-    - dask >=2
-    - matplotlib-base
-    - netcdf4 >=1.4
-    - numpy >=1.14,!=1.15.2
-    - scipy
-    - python-xxhash
+outputs:
+  - name: iris
+    script: build_base.sh
+    requirements:
+      host:
+        - python >=3.8
+        - pip
+      run:
+        - python >=3.8
+        - cartopy >=0.20
+        - cf-units >=3
+        - cftime >=1.5.0 
+        - dask-core >=2
+        - matplotlib-base
+        - netcdf4 >=1.4
+        - numpy >=1.19
+        - scipy
+        - python-xxhash
 
-test:
-  imports:
-    - iris
+    test:
+      imports:
+        - iris
 
+  - name: scitools-iris
+    build:
+      noarch: generic
+    requirements:
+      run:
+        - {{ pin_subpackage('iris', max_pin="x.x.x") }}
+    test:
+      imports:
+        - iris
 about:
   home: https://scitools-iris.readthedocs.io/en/stable/
   license: LGPL-3.0-or-later
   license_family: GPL
   license_file: COPYING.LESSER
-  summary: 'Analyse and visualise meteorological and oceanographic data sets.'
+  summary: Analyse and visualise meteorological and oceanographic data sets.
 
 extra:
   recipe-maintainers:
@@ -49,3 +61,7 @@ extra:
     - corinnebosley
     - lbdreyer
     - pp-mo
+    - jamesp
+    - stephenworsley
+    - trexfeathers
+    - wjbenfold
