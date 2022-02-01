@@ -10,11 +10,11 @@ source:
 
 build:
   noarch: python
+  script: python -m pip install --no-deps --ignore-installed .
   number: 0
 
 outputs:
-  - name: iris
-    script: {{ PYTHON }} -m pip install --no-deps --ignore-installed .
+  - name: iris  
     requirements:
       host:
         - python >=3.8
