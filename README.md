@@ -126,4 +126,7 @@ Feedstock Maintainers
 * [@pelson](https://github.com/pelson/)
 * [@pp-mo](https://github.com/pp-mo/)
 * [@rhattersley](https://github.com/rhattersley/)
+* [@stephenworsley](https://github.com/stephenworsley/)
+* [@trexfeathers](https://github.com/trexfeathers/)
+* [@wjbenfold](https://github.com/wjbenfold/)
 

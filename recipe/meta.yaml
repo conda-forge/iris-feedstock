@@ -1,4 +1,4 @@
-{% set version = "3.1.0" %}
+{% set version = "3.2.0" %}
 
 package:
   name: iris
@@ -6,31 +6,28 @@ package:
 
 source:
   url: https://github.com/SciTools/iris/archive/v{{ version }}.tar.gz
-  sha256: 7c825ccc3bd823c6c66f8dc2bc98e56f84e41a0bd4cd2e9ac1b51930ad59c6a3
-  patches:
-    # can be dropped next release
-    - backport-4418.patch
+  sha256: 7881ec77511abc21e99c240f9ac547bc958e4ebe31fbacc6de6c0899a84bc212
 
 build:
   noarch: python
-  number: 3
+  script: python -m pip install --no-deps --ignore-installed .
+  number: 0
 
 outputs:
-  - name: iris
-    script: build_base.sh
+  - name: iris  
     requirements:
       host:
-        - python >=3.6
+        - python >=3.8
         - pip
       run:
-        - python >=3.6
-        - cartopy >=0.18
-        - cf-units
+        - python >=3.8
+        - cartopy >=0.20
+        - cf-units >=3
         - cftime >=1.5.0 
         - dask-core >=2
         - matplotlib-base
         - netcdf4 >=1.4
-        - numpy >=1.14,!=1.15.2
+        - numpy >=1.19
         - scipy
         - python-xxhash
 
@@ -65,3 +62,6 @@ extra:
     - lbdreyer
     - pp-mo
     - jamesp
+    - stephenworsley
+    - trexfeathers
+    - wjbenfold
