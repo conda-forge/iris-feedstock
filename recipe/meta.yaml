@@ -1,4 +1,4 @@
-{% set version = "3.2.1" %}
+{% set version = "3.2.1.post0" %}
 
 package:
   name: iris
@@ -6,12 +6,12 @@ package:
 
 source:
   url: https://github.com/SciTools/iris/archive/v{{ version }}.tar.gz
-  sha256: f9d585f81ffdb384ca9752fee3884b02ec20336a7e9a6fd841373f0cc85ed892
+  sha256: f68d2235e0f29939d9fa7d221cc92cb445c116fd34f1f84f9bc7ebdae267300d
 
 build:
   noarch: python
   script: python -m pip install --no-deps --ignore-installed .
-  number: 1
+  number: 0
 
 outputs:
   - name: iris  
@@ -22,8 +22,8 @@ outputs:
       run:
         - python >=3.8
         - cartopy >=0.20
-        - cf-units =3.0
-        - cftime <1.6.0
+        - cf-units ==3.0.1
+        - cftime ==1.5.1.1
         - dask-core >=2
         - matplotlib-base
         - netcdf4 >=1.4
