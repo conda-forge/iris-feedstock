@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/SciTools/iris/archive/v{{ version }}.tar.gz
-  sha256: f68d2235e0f29939d9fa7d221cc92cb445c116fd34f1f84f9bc7ebdae267300d
+  sha256: 4773ca1f7948e60dbc1b0a9c914a3b97e011b0d3fecb0f4002495b3bcac1d389
 
 build:
   noarch: python
