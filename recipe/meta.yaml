@@ -19,6 +19,8 @@ outputs:
       host:
         - python >=3.8
         - pip
+        - setuptools >=64
+        - setuptools-scm >=7
       run:
         - python >=3.8
         - cartopy >=0.20
