@@ -1,4 +1,3 @@
-{% set name = "scitools-iris" %}
 {% set version = "3.3.0rc0" %}
 
 package:
@@ -6,7 +5,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/s/scitools-iris/scitools-iris-{{ version }}.tar.gz
   sha256: c638a75ed0f29b610c4bfeff25fe59315e7cc108382afd1b26df2575e7f7ed02
 
 build:
@@ -25,8 +24,8 @@ outputs:
       run:
         - python >=3.8
         - cartopy >=0.20
-        - cf-units ==3.0.1
-        - cftime ==1.5.1.1
+        - cf-units
+        - cftime
         - dask-core >=2
         - matplotlib-base
         - netcdf4
