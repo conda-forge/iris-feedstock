@@ -1,12 +1,12 @@
-{% set version = "3.2.0rc0" %}
+{% set version = "3.3.0rc0" %}
 
 package:
   name: iris
   version: {{ version }}
 
 source:
-  url: https://github.com/SciTools/iris/archive/v{{ version }}.tar.gz
-  sha256: 03589b29d8e20510614ba5d8cf57ce1fca4cf2b128033180beee7e6bf9def202
+  url: https://pypi.io/packages/source/s/scitools-iris/scitools-iris-{{ version }}.tar.gz
+  sha256: c638a75ed0f29b610c4bfeff25fe59315e7cc108382afd1b26df2575e7f7ed02
 
 build:
   noarch: python
@@ -19,16 +19,20 @@ outputs:
       host:
         - python >=3.8
         - pip
+        - setuptools >=64
+        - setuptools-scm >=7
       run:
         - python >=3.8
         - cartopy >=0.20
-        - cf-units >=3
-        - cftime >=1.5.0 
+        - cf-units >=3.1
+        - cftime >=1.5
         - dask-core >=2
         - matplotlib-base
-        - netcdf4 >=1.4
+        - netcdf4
         - numpy >=1.19
+        - pyproj
         - scipy
+        - shapely <1.8.3
         - python-xxhash
 
     test:
