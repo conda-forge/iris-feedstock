@@ -24,8 +24,8 @@ outputs:
       run:
         - python >=3.8
         - cartopy >=0.20
-        - cf-units
-        - cftime
+        - cf-units >=3.1
+        - cftime >=1.5
         - dask-core >=2
         - matplotlib-base
         - netcdf4
