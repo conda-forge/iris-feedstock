@@ -5,8 +5,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/SciTools/iris/archive/v{{ version }}.tar.gz
-  sha256: 49943a404f1fe3e90863767de2a77e8465c3f15a0b9e83eee9966b212299553d
+  url: https://pypi.io/packages/source/s/scitools-iris/scitools-iris-{{ version }}.tar.gz
+  sha256: 727df09b30aa90313c1d283fd22e2321a3bd92efa06d6d8475cb5ab46ab47f19
 
 build:
   noarch: python
@@ -19,16 +19,20 @@ outputs:
       host:
         - python >=3.8
         - pip
+        - setuptools >=64
+        - setuptools-scm >=7
       run:
         - python >=3.8
         - cartopy >=0.20
-        - cf-units ==3.0.1
-        - cftime ==1.5.1.1
+        - cf-units >=3.1
+        - cftime >=1.5
         - dask-core >=2
         - matplotlib-base
-        - netcdf4 >=1.4
+        - netcdf4
         - numpy >=1.19
+        - pyproj
         - scipy
+        - shapely !=1.8.3
         - python-xxhash
 
     test:
