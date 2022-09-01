@@ -1,4 +1,4 @@
-{% set version = "3.2.1.post0" %}
+{% set version = "3.3.0" %}
 
 package:
   name: iris
@@ -6,15 +6,15 @@ package:
 
 source:
   url: https://github.com/SciTools/iris/archive/v{{ version }}.tar.gz
-  sha256: 4773ca1f7948e60dbc1b0a9c914a3b97e011b0d3fecb0f4002495b3bcac1d389
+  sha256: 49943a404f1fe3e90863767de2a77e8465c3f15a0b9e83eee9966b212299553d
 
 build:
   noarch: python
-  script: python -m pip install --no-deps --ignore-installed .
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
   number: 0
 
 outputs:
-  - name: iris  
+  - name: iris
     requirements:
       host:
         - python >=3.8
