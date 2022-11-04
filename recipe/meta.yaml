@@ -10,8 +10,8 @@ source:
 
 build:
   noarch: python
-  script: python -m pip install --no-deps --ignore-installed .
-  number: 0
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  number: 1
 
 outputs:
   - name: iris
