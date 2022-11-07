@@ -9,12 +9,12 @@ source:
   sha256: 2269b9ce497702272b38400768533bb0165b397ba05d1c2af96d6ee3a505a2dd
 
 build:
-  noarch: python
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
   number: 1
+  noarch: python
 
 outputs:
   - name: iris
+    script: build_base.sh
     requirements:
       host:
         - python >=3.8
@@ -36,6 +36,10 @@ outputs:
         - python-xxhash
 
     test:
+      requires:
+        - pip
+      commands:
+        - pip check
       imports:
         - iris
 
@@ -48,6 +52,7 @@ outputs:
     test:
       imports:
         - iris
+
 about:
   home: https://scitools-iris.readthedocs.io/en/stable/
   license: LGPL-3.0-or-later
