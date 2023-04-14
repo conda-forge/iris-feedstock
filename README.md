@@ -1,11 +1,11 @@
-About iris
-==========
+About iris-feedstock
+====================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/iris-feedstock/blob/main/LICENSE.txt)
 
 Home: https://scitools-iris.readthedocs.io/en/stable/
 
 Package license: LGPL-3.0-or-later
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/iris-feedstock/blob/master/LICENSE.txt)
 
 Summary: Analyse and visualise meteorological and oceanographic data sets.
 
@@ -15,8 +15,8 @@ Current build status
 
 <table><tr><td>All platforms:</td>
     <td>
-      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=464&branchName=master">
-        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/iris-feedstock?branchName=master">
+      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=464&branchName=main">
+        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/iris-feedstock?branchName=main">
       </a>
     </td>
   </tr>
@@ -144,16 +144,11 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
-* [@DPeterK](https://github.com/DPeterK/)
 * [@bjlittle](https://github.com/bjlittle/)
-* [@corinnebosley](https://github.com/corinnebosley/)
-* [@jamesp](https://github.com/jamesp/)
+* [@esadek-mo](https://github.com/esadek-mo/)
 * [@lbdreyer](https://github.com/lbdreyer/)
 * [@ocefpaf](https://github.com/ocefpaf/)
-* [@pelson](https://github.com/pelson/)
 * [@pp-mo](https://github.com/pp-mo/)
-* [@rhattersley](https://github.com/rhattersley/)
 * [@stephenworsley](https://github.com/stephenworsley/)
 * [@trexfeathers](https://github.com/trexfeathers/)
-* [@wjbenfold](https://github.com/wjbenfold/)
 
