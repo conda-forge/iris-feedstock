@@ -1,4 +1,4 @@
-{% set version = "3.4.1" %}
+{% set version = "3.5.0" %}
 
 package:
   name: iris
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/s/scitools-iris/scitools-iris-{{ version }}.tar.gz
-  sha256: cd1fb3208ff9ba024b16a08243727e44147b15db54ee33eb6d330fc926f7ffe9
+  sha256: 85070e934483a41531c99a16a63a9ef2d44044ea46fc478edf736be0c49b7476
 
 build:
   noarch: python
@@ -26,7 +26,8 @@ outputs:
         - cartopy >=0.21
         - cf-units >=3.1
         - cftime >=1.5
-        - dask-core >=2.26
+        - dask-core >=2022.9.0
+        - libnetcdf <4.9
         - matplotlib-base >=3.5
         - netcdf4
         - numpy >=1.19
@@ -57,11 +58,10 @@ about:
 
 extra:
   recipe-maintainers:
-    - pelson
-    - rhattersley
     - ocefpaf
     - bjlittle
     - lbdreyer
     - pp-mo
     - stephenworsley
     - trexfeathers
+    - esadek-mo
