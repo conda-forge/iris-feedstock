@@ -1,4 +1,4 @@
-{% set version = "3.6.0rc0" %}
+{% set version = "3.6.1" %}
 
 package:
   name: iris
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/s/scitools-iris/scitools-iris-{{ version }}.tar.gz
-  sha256: f7f5e8a61358ae8c91ad2bcd7f651dd56a1fd443a1234bfecba931d70571fc53
+  sha256: 77502f6dc25f2ae6e189929001fd5684055529efab227b4bc6f18857b917757b
 
 build:
   noarch: python
@@ -16,6 +16,9 @@ build:
 outputs:
   - name: iris
     requirements:
+      build:
+        - python                                 # [build_platform != target_platform]
+        - cross-python_{{ target_platform }}     # [build_platform != target_platform]
       host:
         - python >=3.9
         - pip
@@ -64,4 +67,4 @@ extra:
     - pp-mo
     - stephenworsley
     - trexfeathers
-    - esadek-mo
+    - ESadek-MO
