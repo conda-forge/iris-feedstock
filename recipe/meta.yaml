@@ -1,4 +1,4 @@
-{% set version = "3.6.1" %}
+{% set version = "3.7.0rc0" %}
 
 package:
   name: iris
@@ -6,12 +6,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/s/scitools-iris/scitools-iris-{{ version }}.tar.gz
-  sha256: 77502f6dc25f2ae6e189929001fd5684055529efab227b4bc6f18857b917757b
+  sha256: 79e6e99430b767616302a5adee2fb7d8fc0ab3a17a3562a58880c8991e48e857
 
 build:
   noarch: python
   script: python -m pip install --no-deps --ignore-installed .
-  number: 0
+  number: 1
 
 outputs:
   - name: iris
