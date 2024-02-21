@@ -1,4 +1,4 @@
-{% set version = "3.7.0" %}
+{% set version = "3.8.0rc0" %}
 
 package:
   name: iris
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/s/scitools-iris/scitools-iris-{{ version }}.tar.gz
-  sha256: 037c2394aeeefd111780d4d7d020326276e65a9a98753f15db67550e66d6ffe7
+  sha256: 7f1bb3c5a05f28115ef859aabf2fe066ad738b52020a268f02ca24581e5ec9f0
 
 build:
   noarch: python
@@ -33,7 +33,7 @@ outputs:
         - libnetcdf !=4.9.1
         - matplotlib-base >=3.5
         - netcdf4
-        - numpy >=1.21,!=1.24.3
+        - numpy >=1.23,!=1.24.3
         - pyproj
         - scipy
         - shapely !=1.8.3
@@ -54,9 +54,9 @@ outputs:
         - iris
 about:
   home: https://scitools-iris.readthedocs.io/en/stable/
-  license: LGPL-3.0-or-later
-  license_family: GPL
-  license_file: COPYING.LESSER
+  license: BSD-3-Clause
+  license_family: BSD
+  license_file: LICENSE
   summary: Analyse and visualise meteorological and oceanographic data sets.
 
 extra:
