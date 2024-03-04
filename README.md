@@ -5,7 +5,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/iris-feedstock/
 
 Home: https://scitools-iris.readthedocs.io/en/stable/
 
-Package license: BSD-3-Clause
+Package license: LGPL-3.0-or-later
 
 Summary: Analyse and visualise meteorological and oceanographic data sets.
 
