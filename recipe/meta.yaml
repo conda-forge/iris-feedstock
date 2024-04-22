@@ -5,7 +5,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/s/scitools-iris/scitools-iris-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/s/scitools-iris/scitools_iris-{{ version }}.tar.gz
   sha256: 53c701899aa08014beeb9dd0040bd5584511229fff98e74ff30b6eab5d4d02aa
 
 build:
