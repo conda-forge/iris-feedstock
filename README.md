@@ -145,7 +145,6 @@ Feedstock Maintainers
 =====================
 
 * [@ESadek-MO](https://github.com/ESadek-MO/)
-* [@HGWright](https://github.com/HGWright/)
 * [@bjlittle](https://github.com/bjlittle/)
 * [@lbdreyer](https://github.com/lbdreyer/)
 * [@ocefpaf](https://github.com/ocefpaf/)
