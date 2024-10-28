@@ -152,4 +152,5 @@ Feedstock Maintainers
 * [@pp-mo](https://github.com/pp-mo/)
 * [@stephenworsley](https://github.com/stephenworsley/)
 * [@trexfeathers](https://github.com/trexfeathers/)
+* [@ukmo-ccbunney](https://github.com/ukmo-ccbunney/)
 
