@@ -1,4 +1,4 @@
-{% set version = "3.10.0" %}
+{% set version = "3.11.0rc0" %}
 
 package:
   name: iris
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/s/scitools-iris/scitools_iris-{{ version }}.tar.gz
-  sha256: 87e28c7f1a3284e2d1646003c8818116153bcebc872d960dc80f63021270a30d
+  sha256: 5a5a89ffdad3ab5f40eeff7fa0883315629d9a0a7edd8a93c8304aa051e8bfdc
 
 build:
   noarch: python
@@ -29,11 +29,11 @@ outputs:
         - cartopy >=0.21
         - cf-units >=3.1
         - cftime >=1.5
-        - dask-core >=2022.9.0
+        - dask-core >=2022.9.0, !=2024.8.0
         - libnetcdf !=4.9.1
-        - matplotlib-base >=3.5
+        - matplotlib-base >=3.5, !=3.9.1
         - netcdf4
-        - numpy >=1.24,!=1.24.3,<2
+        - numpy >=1.24,!=1.24.3
         - python-xxhash
         - pyproj
         - scipy
@@ -69,3 +69,4 @@ extra:
     - trexfeathers
     - ESadek-MO
     - HGWright
+    - ukmo-ccbunney
