@@ -1,3 +1,4 @@
+{% set python_min = '3.10' %}
 {% set version = "3.11.1" %}
 
 package:
@@ -10,8 +11,8 @@ source:
 
 build:
   noarch: python
-  script: python -m pip install --no-deps --ignore-installed .
-  number: 0
+  script: python -m pip install . -vv --no-deps --no-build-isolation
+  number: 1
 
 outputs:
   - name: iris
@@ -20,12 +21,12 @@ outputs:
         - python                                 # [build_platform != target_platform]
         - cross-python_{{ target_platform }}     # [build_platform != target_platform]
       host:
-        - python >=3.10
+        - python {{ python_min }}
         - pip
         - setuptools >=64
         - setuptools-scm >=7
       run:
-        - python >=3.10
+        - python >={{ python_min }}
         - cartopy >=0.21
         - cf-units >=3.1
         - cftime >=1.5
@@ -40,6 +41,8 @@ outputs:
         - shapely !=1.8.3
 
     test:
+      requires:
+        - python {{ python_min }}
       imports:
         - iris
 
