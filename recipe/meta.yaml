@@ -1,5 +1,5 @@
 {% set python_min = "3.11" %}
-{% set version = "3.12.2" %}
+{% set version = "3.13.0" %}
 
 package:
   name: iris
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/s/scitools-iris/scitools_iris-{{ version }}.tar.gz
-  sha256: fb2436b1a80b584ccc7b5d63b456b5180767010dcdefbb2cd6c560e110e50899
+  sha256: e3a00f9166f4e55ac41c8861411cba2759b27eaaee8158c87c4cd4c084024895 
 
 build:
   noarch: python
@@ -23,8 +23,8 @@ outputs:
       host:
         - python {{ python_min }}
         - pip
-        - setuptools >=64
-        - setuptools-scm >=7
+        - setuptools >=77.0.3
+        - setuptools-scm >=8
       run:
         - python >={{ python_min }}
         - cartopy >=0.21
