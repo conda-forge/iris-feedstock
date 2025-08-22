@@ -23,8 +23,8 @@ outputs:
       host:
         - python {{ python_min }}
         - pip
-        - setuptools >=64
-        - setuptools-scm >=7
+        - setuptools >=77.0.3
+        - setuptools-scm >=8
       run:
         - python >={{ python_min }}
         - cartopy >=0.21
