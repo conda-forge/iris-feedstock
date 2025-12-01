@@ -12,7 +12,7 @@ source:
 build:
   noarch: python
   script: python -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 2
 
 outputs:
   - name: iris
@@ -42,9 +42,12 @@ outputs:
 
     test:
       requires:
+        - pip
         - python {{ python_min }}
       imports:
         - iris
+      commands:
+        - pip check
 
   - name: scitools-iris
     build:
