@@ -1,5 +1,5 @@
 {% set python_min = "3.11" %}
-{% set version = "3.14.0" %}
+{% set version = "3.14.1" %}
 
 package:
   name: iris
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/s/scitools-iris/scitools_iris-{{ version }}.tar.gz
-  sha256: 3b2f4091883d1e401192b4f64aead9e4bbdb84854b74c984614d79742b2fab96
+  sha256: ccc8025d24b74d86ab780266cb9f708c468ac53426a45fab20bfc315c68383f7
 
 build:
   noarch: python
   script: python -m pip install . -vv --no-deps --no-build-isolation
-  number: 2
+  number: 0
 
 outputs:
   - name: iris
@@ -26,14 +26,14 @@ outputs:
         - setuptools >=77.0.3
         - setuptools-scm >=8
       run:
-        - python >={{ python_min }},<3.14
+        - python >={{ python_min }}
         - cartopy >=0.21
         - cf-units >=3.1
         - cftime >=1.5
-        - dask-core >=2025.1.0,<2025.10.0
+        - dask-core >=2025.1.0,!=2025.10.0
         - libnetcdf !=4.9.1
         - matplotlib-base >=3.5,!=3.9.1
-        - netcdf4 <1.7.3
+        - netcdf4
         - numpy >=1.24,!=1.24.3
         - python-xxhash
         - pyproj
