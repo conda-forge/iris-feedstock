@@ -33,14 +33,14 @@ Current release info
 Installing iris
 ===============
 
-Installing `iris` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
+Installing `iris` from the `conda-forge/label/rc_iris` channel can be achieved by adding `conda-forge/label/rc_iris` to your channels with:
 
 ```
-conda config --add channels conda-forge
+conda config --add channels conda-forge/label/rc_iris
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `iris, scitools-iris` can be installed with `conda`:
+Once the `conda-forge/label/rc_iris` channel has been enabled, `iris, scitools-iris` can be installed with `conda`:
 
 ```
 conda install iris scitools-iris
@@ -55,26 +55,26 @@ mamba install iris scitools-iris
 It is possible to list all of the versions of `iris` available on your platform with `conda`:
 
 ```
-conda search iris --channel conda-forge
+conda search iris --channel conda-forge/label/rc_iris
 ```
 
 or with `mamba`:
 
 ```
-mamba search iris --channel conda-forge
+mamba search iris --channel conda-forge/label/rc_iris
 ```
 
 Alternatively, `mamba repoquery` may provide more information:
 
 ```
 # Search all versions available on your platform:
-mamba repoquery search iris --channel conda-forge
+mamba repoquery search iris --channel conda-forge/label/rc_iris
 
 # List packages depending on `iris`:
-mamba repoquery whoneeds iris --channel conda-forge
+mamba repoquery whoneeds iris --channel conda-forge/label/rc_iris
 
 # List dependencies of `iris`:
-mamba repoquery depends iris --channel conda-forge
+mamba repoquery depends iris --channel conda-forge/label/rc_iris
 ```
 
 
